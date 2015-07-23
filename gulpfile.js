@@ -1,17 +1,32 @@
 var gulp = require('gulp');
     less = require('gulp-less');
-    path = require('path');
-    watchLess = require('gulp-watch-less');
+    connect = require('gulp-connect'),
+
+//Server
+gulp.task('connect', function() {
+  connect.server({
+    livereload: true
+  });
+});
+
+//Watch HTML
+gulp.task('html', function () {
+  gulp.src('./*.html')
+    .pipe(connect.reload());
+});
 
 // Less task
 gulp.task('less', function(){
-  return gulp.src('./less/main.less')
+  gulp.src('./less/main.less')
     .pipe(less())
     .pipe(gulp.dest('./dist/css'))
+    .pipe(connect.reload());
 });
 
-gulp.task('watch-less', function(){
-  gulp.watch('./less/*.less', ['less']);
+//Watch Task
+gulp.task('watch', function(){
+  gulp.watch(['less/*.less'], ['less']);
+  gulp.watch(['./*.html'], ['html']);
 });
 
-gulp.task('default', ['less','watch-less']);
+gulp.task('default', ['connect','less', 'html', 'watch']);

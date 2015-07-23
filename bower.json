@@ -1,0 +1,15 @@
+{
+  "name": "sco",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Willis <ewillis182@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -4,8 +4,8 @@
   "description": "SCO Website",
   "main": "index.js",
   "repository": {
-  "type": "git",
-  "url": "git://github.com/username/repository.git"
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,8 @@
   "author": "Eric Willis",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-less": "^3.0.3"
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.0",
+    "gulp-watch": "^4.3.3"
   }
 }
