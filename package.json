@@ -12,9 +12,11 @@
   },
   "author": "Eric Willis",
   "devDependencies": {
+    "bower-webpack-plugin": "^0.1.8",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.3",
     "gulp-livereload": "^3.8.0",
-    "gulp-watch": "^4.3.3"
+    "gulp-watch": "^4.3.3",
+    "webpack": "^1.10.5"
   }
 }

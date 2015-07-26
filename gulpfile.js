@@ -1,6 +1,7 @@
 var gulp = require('gulp');
     less = require('gulp-less');
-    connect = require('gulp-connect'),
+    connect = require('gulp-connect');
+    packed = require('webpack');
 
 // Server
 gulp.task('connect', function() {
